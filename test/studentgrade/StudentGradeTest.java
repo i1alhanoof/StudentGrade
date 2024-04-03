@@ -1,14 +1,14 @@
 package studentgrade;
 
-import junit.framework.TestCase;
 
-/* JUnit 3.8.1 */
-public class StudentGradeTest extends TestCase {
+import org.junit.*;
+import static org.junit.Assert.assertEquals;
+
+/* JUnit 4.8.2 */
+public class StudentGradeTest {
     
-    public StudentGradeTest(String testName) {
-        super(testName);
-    }
-
+    // first test case that the grade = A
+    @Test
     public void testGetGrade95() {
         System.out.println("getGrade 95");
         int mark = 95;
@@ -17,6 +17,8 @@ public class StudentGradeTest extends TestCase {
         assertEquals(expResult, result);
     }
 
+    // second test case that the grade = B
+    @Test
     public void testGetGrade85() {
         System.out.println("getGrade 85");
         int mark = 85;
@@ -25,6 +27,8 @@ public class StudentGradeTest extends TestCase {
         assertEquals(expResult, result);
     }
     
+    // third test case that the grade = F
+    @Test
     public void testGetGrade75() {
         System.out.println("getGrade 85");
         int mark = 75;
